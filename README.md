@@ -10,9 +10,10 @@ the following steps only need to be completed 1 time.
 1. [install Xbar](https://xbarapp.com/dl)
 2. open Xbar > click xbar icon > "open plugin folder"
 3. paste contents of `merge-freeze.5m.rb` into `merge-freeze.5m.rb` (`touch/vim` new file)
-4. refresh Xbar (open menu app, then CMD+R)
-5. click the Merge Freeze menu icon > CMD+E to open the config interface
-6. add your organization's GitHub slug and a Merge Freeze [organization-level API token](https://docs.mergefreeze.com/web-api#organization-access-tokens-organizations-only).
+4. `cd ~/Library/Application\ Support/xbar/plugins/ && chmod +x merge-freeze.5m.rb`
+5. refresh Xbar (open menu app, then CMD+R)
+6. click the Merge Freeze menu icon > CMD+E to open the config interface
+7. add your organization's GitHub slug and a Merge Freeze [organization-level API token](https://docs.mergefreeze.com/web-api#organization-access-tokens-organizations-only).
 
 ### Features
 
