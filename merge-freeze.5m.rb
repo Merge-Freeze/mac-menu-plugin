@@ -5,11 +5,11 @@ require 'net/http'
 require 'json'
 
 # <xbar.title>Merge Freeze</xbar.title>
-# <xbar.version>v0.1</xbar.version>
+# <xbar.version>v0.2</xbar.version>
 # <xbar.author>Ryan Kulp</xbar.author>
 # <xbar.author.github>ryanckulp</xbar.author.github>
-# <xbar.desc>Manage repository freezes from the Mac menu bar.</xbar.desc>
-# <xbar.image>https://www.mergefreeze.com/insert-image-here</xbar.image>
+# <xbar.desc>Manage GitHub repository branch freezes from the Mac menu bar.</xbar.desc>
+# <xbar.image>https://user-images.githubusercontent.com/3083888/188286665-131e3cb8-9b1d-45e2-af4a-2852201c334e.png</xbar.image>
 # <xbar.dependencies>ruby</xbar.dependencies>
 # <xbar.abouturl>https://github.com/Merge-Freeze/mac-menu-plugin</xbar.abouturl>
 
