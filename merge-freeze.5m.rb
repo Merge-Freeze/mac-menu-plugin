@@ -41,7 +41,7 @@ class MergeFreezeApplet
   end
 
   def call
-    if api_key.length > 0 && organization_slug.length > 0
+    if (api_key && api_key.length > 0) && (organization_slug && organization_slug.length > 0)
       get_repositories
       set_icon
       insert_separator
