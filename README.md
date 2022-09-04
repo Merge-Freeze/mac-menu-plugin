@@ -13,7 +13,7 @@ the following steps only need to be completed 1 time. following approval by the 
 4. while still in `xbar/plugins` directory, `chmod +x merge-freeze.5m.rb` (file must be executable)
 5. click xbar mac menu icon > click "Refresh all" to activate Merge Freeze plugin
 6. click the Merge Freeze menu icon > press "CMD+E" to open plugin interface
-7. add your organization's GitHub slug and a Merge Freeze [organization-level API token](https://docs.mergefreeze.com/web-api#organization-access-tokens-organizations-only) in the labled fields
+7. add your organization's GitHub slug and a Merge Freeze [organization-level API token](https://docs.mergefreeze.com/web-api#organization-access-tokens-organizations-only) in the labeled fields, then click the "refresh" button
 
 ### Features
 
