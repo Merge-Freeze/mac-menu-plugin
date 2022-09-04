@@ -9,7 +9,7 @@ the following steps only need to be completed 1 time. following approval by the 
 
 1. [install Xbar](https://xbarapp.com/dl)
 2. open Xbar app > click xbar mac menu icon > click "open plugin folder"
-3. paste contents of `merge-freeze.5m.rb` into `merge-freeze.5m.rb` (`cd ~/Library/Application\ Support/xbar/plugins/` then touch/vim` new file)
+3. `cd ~/Library/Application\ Support/xbar/plugins/ && touch merge-freeze.5m.rb` > paste raw contents of [merge-freeze.5m.rb](https://github.com/Merge-Freeze/mac-menu-plugin/blob/master/merge-freeze.5m.rb) into new file
 4. while still in `xbar/plugins` directory, `chmod +x merge-freeze.5m.rb` (file must be executable)
 5. click xbar mac menu icon > click "Refresh all" to activate Merge Freeze plugin
 6. click the Merge Freeze menu icon > press "CMD+E" to open plugin interface
