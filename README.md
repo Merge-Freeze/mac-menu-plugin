@@ -8,12 +8,12 @@ Manage projects without logging into your dashboard or visiting a GitHub pull re
 the following steps only need to be completed 1 time. following approval by the official Xbar plugin directory, installation will be reduced to just 2 steps: install Xbar, click "install Merge Freeze" from the app store.
 
 1. [install Xbar](https://xbarapp.com/dl)
-2. open Xbar > click xbar icon > "open plugin folder"
-3. paste contents of `merge-freeze.5m.rb` into `merge-freeze.5m.rb` (`touch/vim` new file)
-4. `cd ~/Library/Application\ Support/xbar/plugins/ && chmod +x merge-freeze.5m.rb` (plugin must be executable)
-5. refresh Xbar (open menu app, then CMD+R)
-6. click the Merge Freeze menu icon > CMD+E to open the config interface
-7. add your organization's GitHub slug and a Merge Freeze [organization-level API token](https://docs.mergefreeze.com/web-api#organization-access-tokens-organizations-only).
+2. open Xbar app > click xbar mac menu icon > click "open plugin folder"
+3. paste contents of `merge-freeze.5m.rb` into `merge-freeze.5m.rb` (`cd ~/Library/Application\ Support/xbar/plugins/` then touch/vim` new file)
+4. while still in `xbar/plugins` directory, `chmod +x merge-freeze.5m.rb` (file must be executable)
+5. click xbar mac menu icon > click "Refresh all" to activate Merge Freeze plugin
+6. click the Merge Freeze menu icon > press "CMD+E" to open plugin interface
+7. add your organization's GitHub slug and a Merge Freeze [organization-level API token](https://docs.mergefreeze.com/web-api#organization-access-tokens-organizations-only) in the labled fields
 
 ### Features
 
