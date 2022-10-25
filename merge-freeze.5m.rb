@@ -65,16 +65,16 @@ class MergeFreezeApplet
       freezesEnabled = repo['scheduled_freezes_enabled']
       timeDetails = ""
 
-      timeLabel = "Scheduled to freeze "
+      timeLabel = "Freezes"
       timeValue = repo['next_freeze_at']
 
       if collection == "frozen"
-        timeLabel = "Scheduled to unfreeze "
+        timeLabel = "Unfreezes"
         timeValue = repo['next_unfreeze_at']
       end
 
       if timeValue != nil
-        timeDetails = "#{timeLabel}: #{Time.at(timeValue).strftime('%Y %B %d %k:%M')}"
+        timeDetails = "#{timeLabel}: #{Time.at(timeValue).strftime('%Y %B %d %k:%M %Z')}"
       end
 
       puts "-- #{repo['name']} | href=#{repo['url']}"
