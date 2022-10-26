@@ -17,6 +17,7 @@ require 'date'
 # Variables become preferences in the app:
 # <xbar.var>string(API_KEY=""): Organization-level API key from MergeFreeze.com.</xbar.var>
 # <xbar.var>string(ORGANIZATION_SLUG=""): Organization "slug" username on GitHub.com.</xbar.var>
+# <xbar.var>string(DATE_FORMAT=""): (Optional) Scheduled freezes date format. Options: YYYY-MM-DD, M-D-Y, M-D.</xbar.var>
 
 module Icons
   # red fill, 1+ repos are frozen
@@ -34,11 +35,19 @@ class MergeFreezeApplet
   include Icons
 
   BASE_URL = 'https://www.mergefreeze.com'.freeze
-  attr_accessor :api_key, :organization_slug, :repositories
+  attr_accessor :api_key, :organization_slug, :date_format, :repositories
+
+  # add more options here via foragoodstrftime.com
+  DATE_FORMATS = {
+    'YYYY-MM-DD' => '%Y %B %d',
+    'M-D-Y' => '%B %d %Y',
+    'M-D' => '%B %d'
+  }
 
   def initialize
     @api_key = ENV['API_KEY']
     @organization_slug = ENV['ORGANIZATION_SLUG']
+    @date_format = DATE_FORMATS.keys.include?(ENV['DATE_FORMAT']) ? DATE_FORMATS[ENV['DATE_FORMAT']] : DATE_FORMATS['YYYY-MM-DD']
   end
 
   def call
@@ -82,7 +91,7 @@ class MergeFreezeApplet
     timestamp_key = label == 'Freezes' ? 'freeze' : 'unfreeze'
     timestamp = repo["next_#{timestamp_key}_at"]
 
-    puts "---- #{label}: #{Time.at(timestamp).strftime('%Y %B %d %k:%M %Z')} | href=#{repo['url']}" unless timestamp.nil?
+    puts "---- #{label}: #{Time.at(timestamp).strftime("#{date_format} %k:%M %Z")} | href=#{repo['url']}" unless timestamp.nil?
   end
 
   def frozen_repos_exist?
