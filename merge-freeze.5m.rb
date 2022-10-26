@@ -91,7 +91,7 @@ class MergeFreezeApplet
     timestamp_key = label == 'Freezes' ? 'freeze' : 'unfreeze'
     timestamp = repo["next_#{timestamp_key}_at"]
 
-    puts "---- #{label}: #{Time.at(timestamp).strftime("#{date_format} %k:%M %Z")} | href=#{repo['url']}" unless timestamp.nil?
+    puts "---- #{label}: #{Time.at(timestamp).strftime("#{date_format} (%k:%M %Z)")} | href=#{repo['url']}" unless timestamp.nil?
   end
 
   def frozen_repos_exist?
