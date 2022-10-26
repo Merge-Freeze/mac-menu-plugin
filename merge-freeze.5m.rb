@@ -3,6 +3,7 @@
 require 'uri'
 require 'net/http'
 require 'json'
+require 'date'
 
 # <xbar.title>Merge Freeze</xbar.title>
 # <xbar.version>v0.2</xbar.version>
@@ -61,7 +62,25 @@ class MergeFreezeApplet
 
   def sort_and_print(collection)
     repositories[collection].sort_by { |k| k['name'] }.each do |repo| # list alphabetically
+      freezesEnabled = repo['scheduled_freezes_enabled']
+      timeDetails = ""
+
+      timeLabel = "Freezes"
+      timeValue = repo['next_freeze_at']
+
+      if collection == "frozen"
+        timeLabel = "Unfreezes"
+        timeValue = repo['next_unfreeze_at']
+      end
+
+      if timeValue != nil
+        timeDetails = "#{timeLabel}: #{Time.at(timeValue).strftime('%Y %B %d %k:%M %Z')}"
+      end
+
       puts "-- #{repo['name']} | href=#{repo['url']}"
+      if freezesEnabled && timeDetails != ""
+        puts "---- #{timeDetails} | href=#{repo['url']}"
+      end
     end
   end
 
