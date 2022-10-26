@@ -62,26 +62,27 @@ class MergeFreezeApplet
 
   def sort_and_print(collection)
     repositories[collection].sort_by { |k| k['name'] }.each do |repo| # list alphabetically
-      freezesEnabled = repo['scheduled_freezes_enabled']
-      timeDetails = ""
-
-      timeLabel = "Freezes"
-      timeValue = repo['next_freeze_at']
-
-      if collection == "frozen"
-        timeLabel = "Unfreezes"
-        timeValue = repo['next_unfreeze_at']
-      end
-
-      if timeValue != nil
-        timeDetails = "#{timeLabel}: #{Time.at(timeValue).strftime('%Y %B %d %k:%M %Z')}"
-      end
-
-      puts "-- #{repo['name']} | href=#{repo['url']}"
-      if freezesEnabled && timeDetails != ""
-        puts "---- #{timeDetails} | href=#{repo['url']}"
-      end
+      repo_and_link(repo)
+      upcoming_schedule(repo, scheduler_label(collection))
     end
+  end
+
+  def repo_and_link(repo)
+    puts "-- #{repo['name']} | href=#{repo['url']}"
+  end
+
+  def scheduler_label(collection)
+    return 'Freezes' if collection == 'unfrozen'
+    return 'Unfreezes' if collection == 'frozen'
+  end
+
+  def upcoming_schedule(repo, label)
+    return unless repo['scheduled_freezes_enabled']
+
+    timestamp_key = label == 'Freezes' ? 'freeze' : 'unfreeze'
+    timestamp = repo["next_#{timestamp_key}_at"]
+
+    puts "---- #{label}: #{Time.at(timestamp).strftime('%Y %B %d %k:%M %Z')} | href=#{repo['url']}" unless timestamp.nil?
   end
 
   def frozen_repos_exist?
