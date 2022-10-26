@@ -17,14 +17,15 @@ the following steps only need to be completed 1 time. following [approval by the
 
 ### Features
 
-* the Merge Freeze icon in your Mac menu bar will switch between a red/white fill when 1+ repositories in your org are frozen
+* the Merge Freeze icon in your menu bar will toggle a red/white fill when 1+ repos are frozen
 * click the icon to view frozen/unfrozen repositories, sorted alphabetically
+* view upcoming Scheduler freeze/unfreeze events, in multiple date formats
 * select any frozen repository to view its blocked pull requests on GitHub
 * select any unfrozen repository to view it in your Merge Freeze dashboard
 
 ### Customizing
 
-below are some tweaks you can add to your own build, or as a PR:
+below are tweaks you can add to your own build, or as a PR:
 
 * ability to freeze/unfreeze directly from the menu dropdown (`href=` [parameter](https://github.com/matryer/xbar-plugins/blob/main/CONTRIBUTING.md#parameters))
 * custom icons (we offer native support for 2, frozen/unfrozen state)
