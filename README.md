@@ -1,4 +1,4 @@
-# Merge Freeze Mac menu plugin
+# Merge Freeze Mac menu plugin 
 
 ![merge-freeze-mac-menu-app-example](https://user-images.githubusercontent.com/3083888/188286665-131e3cb8-9b1d-45e2-af4a-2852201c334e.png)
 
