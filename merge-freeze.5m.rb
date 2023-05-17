@@ -103,7 +103,7 @@ class MergeFreezeApplet
   end
 
   def insert_separator
-    puts "---"
+    puts '---'
   end
 
   def build_menu
