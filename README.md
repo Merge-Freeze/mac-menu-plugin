@@ -1,4 +1,4 @@
-# Merge Freeze Mac menu plugin 
+# Merge Freeze Mac menu plugin
 
 ![merge-freeze-mac-menu-app-example](https://user-images.githubusercontent.com/3083888/188286665-131e3cb8-9b1d-45e2-af4a-2852201c334e.png)
 
@@ -19,8 +19,8 @@ Manage projects without logging into Merge Freeze or visiting a GitHub PR. Power
 * the Merge Freeze icon in your menu bar will toggle a red/white fill when 1+ repos are frozen
 * click the icon to view frozen/unfrozen repositories, sorted alphabetically
 * view upcoming Scheduler freeze/unfreeze events, in multiple date formats
-* select any frozen repository to view its blocked pull requests on GitHub
-* select any unfrozen repository to view it in your Merge Freeze dashboard
+* select a frozen repository to view its blocked pull requests on GitHub
+* select an unfrozen repository to view it in your Merge Freeze dashboard
 
 ### Customizing
 
