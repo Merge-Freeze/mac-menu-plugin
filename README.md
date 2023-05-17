@@ -5,7 +5,6 @@
 Manage projects without logging into your dashboard or visiting a GitHub pull request. Made for [Merge Freeze](https://mergefreeze.com) users, powered by [Xbar](https://xbarapp.com/).
 
 ### Installation
-the following steps only need to be completed 1 time. following [approval by the Xbar plugin directory](https://github.com/matryer/xbar-plugins/pull/1860), installation will be reduced to just 2 steps: install Xbar, click "install Merge Freeze" from the app store.
 
 1. [install Xbar](https://xbarapp.com/dl)
 2. open Xbar app > click xbar mac menu icon > click "open plugin folder"
